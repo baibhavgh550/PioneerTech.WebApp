@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PioneerTech.WebApp", "Pione
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PioneerTech.WebApp.Tests", "PioneerTech.WebApp.Tests\PioneerTech.WebApp.Tests.csproj", "{666C6AFB-B39C-460E-8FBB-E3055FB72528}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PioneerTech.Consultancy.DAL", "PioneerTech.Consultancy.DAL\PioneerTech.Consultancy.DAL.csproj", "{63467B6D-C869-4B10-A5A5-A467E6ECD3FD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyClassLibraryProject", "MyClassLibraryProject\MyClassLibraryProject.csproj", "{B29525C8-A369-451C-BE12-A7EBAB264403}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{666C6AFB-B39C-460E-8FBB-E3055FB72528}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{666C6AFB-B39C-460E-8FBB-E3055FB72528}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{666C6AFB-B39C-460E-8FBB-E3055FB72528}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63467B6D-C869-4B10-A5A5-A467E6ECD3FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63467B6D-C869-4B10-A5A5-A467E6ECD3FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63467B6D-C869-4B10-A5A5-A467E6ECD3FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63467B6D-C869-4B10-A5A5-A467E6ECD3FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B29525C8-A369-451C-BE12-A7EBAB264403}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B29525C8-A369-451C-BE12-A7EBAB264403}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B29525C8-A369-451C-BE12-A7EBAB264403}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B29525C8-A369-451C-BE12-A7EBAB264403}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
