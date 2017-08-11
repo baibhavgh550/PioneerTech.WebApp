@@ -5,15 +5,24 @@
 <html>
 <head runat="server">
     <title></title>
-    <asp:ContentPlaceHolder ID="head" runat="server">
-    </asp:ContentPlaceHolder>
+   
+    <link href="../Content/MainMasterPageStyleSheet.css" rel="stylesheet" />
 </head>
 <body>
-    <form id="form1" runat="server">
+    <form id="MainMasterPage" runat="server">
+        
         <div>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
+            <div id =" Header" class ="header"></div>
+            <div id =" Navigation" class ="navigation"></div>
+            <div id =" Footer" class ="footer"></div>
+            <div id =" Content" class ="content">
+                 <asp:ContentPlaceHolder ID="head" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
         </div>
+       
     </form>
 </body>
 </html>

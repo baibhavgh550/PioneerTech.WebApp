@@ -1,0 +1,25 @@
+﻿.header {
+    height : 20%;
+    width: 100%;
+    background: gray;
+}
+
+body {
+}
+
+.footer {
+    height: 20%;
+    width: 100%;
+    background: gray;
+}
+.navigation {
+    height: 60%;
+    width: 30%;
+    background: orange;
+}
+
+.content {
+    height: 60%;
+    width: 60%;
+    background: white
+}
