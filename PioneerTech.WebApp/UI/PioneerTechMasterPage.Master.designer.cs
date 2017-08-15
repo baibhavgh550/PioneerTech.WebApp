@@ -13,6 +13,15 @@ namespace PioneerTech.WebApp.UI {
     public partial class PioneerTechMasterPage {
         
         /// <summary>
+        /// head control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
+        
+        /// <summary>
         /// MainMasterPage control.
         /// </summary>
         /// <remarks>
@@ -22,21 +31,21 @@ namespace PioneerTech.WebApp.UI {
         protected global::System.Web.UI.HtmlControls.HtmlForm MainMasterPage;
         
         /// <summary>
-        /// ContentPlaceHolder1 control.
+        /// Menu1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolder1;
+        protected global::System.Web.UI.WebControls.Menu Menu1;
         
         /// <summary>
-        /// head control.
+        /// ContentPlaceHolder control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolder;
     }
 }
