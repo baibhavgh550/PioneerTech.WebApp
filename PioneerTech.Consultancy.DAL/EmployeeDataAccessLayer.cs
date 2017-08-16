@@ -1,4 +1,5 @@
 ﻿
+using System;
 using System.Data.SqlClient;
 using MyClassLibraryProject.Model;
 using PioneerTech.Models.Model;
@@ -80,9 +81,9 @@ namespace PioneerTech.Consultancy.DAL
             using (var com = conn.CreateCommand())
             {
                 com.CommandText =
-                    "INSERT INTO CompanyDetail VALUES(@employerName, @contactNumber,@place,@website,@employeeId)";
+                    "INSERT INTO CompanyDetail VALUES(@empName, @contactNumber,@place,@website,@employeeId)";
 
-                com.Parameters.AddWithValue("@projectName", companyModel.EmployerName);
+                com.Parameters.AddWithValue("@empName", companyModel.EmployerName);
                 com.Parameters.AddWithValue("@contactNumber", companyModel.ContactNumber);
                 com.Parameters.AddWithValue("@place", companyModel.Place);
                 com.Parameters.AddWithValue("@website", companyModel.Website);
@@ -93,6 +94,29 @@ namespace PioneerTech.Consultancy.DAL
                 conn.Close();
                 return result;
             }
+        }
+
+        public CompanyModel GetCompanyCode(int employeeid)
+        {
+           var companyModel= new CompanyModel();
+        
+                var connectionstring = "Data Source=BAIBHAV;Initial Catalog=PioneerConsultancyDatabase;" +
+                                          " Integrated Security=True";
+                var mysqlconnection = new SqlConnection(connectionstring);
+                mysqlconnection.Open();
+                var sqlquery = ("Select * FROM CompanyDetail WHERE EmployeeID=" + employeeid);
+                SqlCommand command;
+                command = new SqlCommand(sqlquery, mysqlconnection);
+                SqlDataReader employeedatareader = command.ExecuteReader();
+            while (employeedatareader.Read())
+            {
+                
+                companyModel.EmployerName = employeedatareader.GetString(employeedatareader.GetOrdinal("EmployerName"));
+                companyModel.ContactNumber = employeedatareader.GetString(employeedatareader.GetOrdinal("ContactNumber"));
+                companyModel.Place = employeedatareader.GetString(employeedatareader.GetOrdinal("[Location]"));
+                companyModel.Website = employeedatareader.GetString(employeedatareader.GetOrdinal("Website"));
+            }
+            return companyModel;
         }
 
         public int SaveTechnicalDetails(TechnicalModel technicalModel)

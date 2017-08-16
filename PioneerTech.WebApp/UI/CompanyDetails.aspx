@@ -1,10 +1,10 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/UI/PioneerTechMasterPage.Master" AutoEventWireup="true" CodeBehind="CompanyDetails.aspx.cs" Inherits="PioneerTech.WebApp.UI.CompanyDetails" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style type="text/css">
-        .auto-style9 {
-            margin-left: 0px;
-        }
-    </style>
+    .auto-style9 {
+        margin-left: 0px;
+    }
+</style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder" runat="server">
 
@@ -52,10 +52,10 @@
             <asp:Button ID="CompanySaveButton" runat="server" Text="Save" Height="28px" OnClick="CompanySaveButton_Click" Width="71px" />
         </td>
         <td class="auto-style1">
-            <asp:Button ID="CompanyEditButton" runat="server" Text="Edit" Height="26px" Width="69px" />
-            <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource">
+            <asp:Button ID="CompanyEditButton" runat="server" Text="Edit" Height="26px" Width="69px" OnClick="CompanyEditButton_Click" />
+            <asp:DropDownList ID="DropDownList3" runat="server" DataSourceID="SqlDataSource1" DataTextField="EmployeeID" DataValueField="EmployeeID" OnSelectedIndexChanged="DropDownList3_SelectedIndexChanged">
             </asp:DropDownList>
-            <asp:SqlDataSource ID="SqlDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:PioneerConsultancyDatabaseConnectionString %>" SelectCommand="SELECT [EmployeeID] FROM [CompanyDetail]"></asp:SqlDataSource>
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:PioneerConsultancyDatabaseConnectionString2 %>" SelectCommand="SELECT [EmployeeID] FROM [EmployeeDetail]"></asp:SqlDataSource>
         </td>
         <td>
             <asp:Button ID="CompanyClearButton" runat="server" Text="Clear" Height="28px" OnClick="CompanyClearButton_Click" Width="67px" CssClass="auto-style9" />

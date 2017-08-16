@@ -24,6 +24,7 @@
            <div id ="Navigation" class =" navigation">
             <asp:Menu ID="Menu1" runat="server" OnMenuItemClick="Menu1_MenuItemClick">
                 <Items>
+                    <asp:MenuItem NavigateUrl="~/UI/Home.aspx" Text="Home" Value="Home"></asp:MenuItem>
                     <asp:MenuItem NavigateUrl="~/UI/EmployeeDetails.aspx" Text="Employee Details" Value="EmployeeDetail"></asp:MenuItem>
                     <asp:MenuItem NavigateUrl="~/UI/CompanyDetails.aspx" Text="Comapny Details" Value="CompanyDetail"></asp:MenuItem>
                     <asp:MenuItem NavigateUrl="~/UI/ProjectDetails.aspx" Text="Project Details" Value="Project Detail"></asp:MenuItem>

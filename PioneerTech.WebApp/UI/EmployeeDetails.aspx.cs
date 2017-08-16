@@ -39,9 +39,16 @@ namespace PioneerTech.WebApp
                 var result = employeeDataAccessLayer.SaveEmployeeDetails(employeeModel);
                 if (result > 0)
                 {
-                    Page.ClientScript.RegisterStartupScript(this.GetType(), "showMyMessage", "ShowMessage('Successfully saved!');", true);
+                    var display = "Successful!";
+                    ClientScript.RegisterStartupScript(this.GetType(), "Operation was", "alert('" + display + "');",
+                        true);
                 }
-                else Page.ClientScript.RegisterStartupScript(this.GetType(), "showMyMessage", "ShowMessage('Successfully saved!');", true);
+                else
+                {
+                    var display = "UnSuccessful!";
+                    ClientScript.RegisterStartupScript(this.GetType(), "Operation was", "alert('" + display + "');",
+                        true);
+                }
             }
             catch (Exception ex)
             {
@@ -52,6 +59,20 @@ namespace PioneerTech.WebApp
             }
 
 
+        }
+
+        protected void ButtonClear_Click(object sender, EventArgs e)
+        {
+            FirstNameTextBox.Text = "";
+            LastNameTextBox.Text = "";
+            EmailIdTextBox.Text = "";
+            MobileNumberTextBox.Text = "";
+            AlternateMobileNumberTextBox.Text = "";
+            AddressTextBox.Text = "";
+            AlternateAddressTextBox.Text = "";
+            HomeCountryTextBox.Text = "";
+            CurrentCountryTextBox.Text = "";
+            ZipCodeTextBox0.Text = "";
         }
     }
 }

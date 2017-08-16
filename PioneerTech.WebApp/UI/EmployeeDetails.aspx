@@ -96,7 +96,7 @@
                 <asp:Button ID="EditButton" runat="server" CssClass="auto-style10" Text="Edit" Width="83px" />
             </td>
             <td>
-                <asp:Button ID="ButtonClear" runat="server" Text="Clear" Width="84px" />
+                <asp:Button ID="ButtonClear" runat="server" Text="Clear" Width="84px" OnClick="ButtonClear_Click" />
             </td>
         </tr>
     </table>
